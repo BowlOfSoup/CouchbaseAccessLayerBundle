@@ -6,7 +6,7 @@
 - [Usage of this bundle](#usage-of-this-bundle)
 
 This Symfony bundle is a wrapper around [bowlofsoup/couchbase-access-layer](https://github.com/BowlOfSoup/couchbase-access-layer).
-Checkout the README.md of that repository for how to use!
+Checkout the README.md of that repository on how to use it.
 
 Installation
 ------------
