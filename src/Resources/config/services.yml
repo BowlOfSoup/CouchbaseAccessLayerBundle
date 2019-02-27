@@ -1,0 +1,13 @@
+services:
+    BowlOfSoup\CouchbaseAccessBundle\Factory\ClusterFactory:
+        class: BowlOfSoup\CouchbaseAccessBundle\Factory\ClusterFactory
+        arguments:
+        - %couchbase_access_layer.host%
+        - %couchbase_access_layer.user%
+        - %couchbase_access_layer.password%
+
+    BowlOfSoup\CouchbaseAccessBundle\Factory\BucketRepository:
+        class: BowlOfSoup\CouchbaseAccessBundle\Factory\BucketRepository
+        arguments:
+            - %couchbase_access_layer.bucket_default%
+            - '@BowlOfSoup\CouchbaseMigrationsBundle\Factory\ClusterFactory'

@@ -1,0 +1,21 @@
+{
+  "name": "bowlofsoup/couchbase-access-layer-bundle",
+  "description": "Symfony bundle which wraps bowlofsoup/couchbase-access-layer.",
+  "license": "MIT",
+  "config": {
+    "platform": {
+      "php": "7.0.8"
+    }
+  },
+  "require": {
+    "php": "^7.0",
+    "symfony/framework-bundle": "^3.4",
+    "bowlofsoup/couchbase-access-layer": "^1.0"
+  },
+  "autoload": {
+    "psr-4": { "BowlOfSoup\\CouchbaseAccessLayerBundle\\": "src" }
+  },
+  "autoload-dev": {
+    "psr-4": { "BowlOfSoup\\CouchbaseAccessLayerBundle\\Test\\": "tests" }
+  }
+}
