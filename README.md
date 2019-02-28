@@ -58,9 +58,9 @@ of the bowlofsoup/couchbase-access-layer repository on how to use this 'query bu
 You can also make your own definition of a BucketRepository to use a different bucket than the default you configured.
 
     my_own_bucket_repository:
-        class: BowlOfSoup\CouchbaseAccessBundle\Factory\BucketRepository
+        class: BowlOfSoup\CouchbaseAccessLayer\Repository\BucketRepository
         arguments:
             - 'your bucket'
-            - '@BowlOfSoup\CouchbaseMigrationsBundle\Factory\ClusterFactory'
+            - '@BowlOfSoup\CouchbaseAccessLayer\Factory\ClusterFactory'
 
 This goes in your own `services.yml` definition.
