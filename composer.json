@@ -9,7 +9,7 @@
   },
   "require": {
     "php": "^7.0",
-    "symfony/framework-bundle": "^3.4",
+    "symfony/framework-bundle": "^3.4|^4.4",
     "bowlofsoup/couchbase-access-layer": "^1.0"
   },
   "autoload": {
