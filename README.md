@@ -34,10 +34,12 @@ Update your .env file
 ---------------------
 Make sure to add the correct configuration values to your .env file:
 
+```
 COUCHBASE_HOST="127.0.0.1"
 COUCHBASE_USER="couchbase_user"
 COUCHBASE_PASSWORD="couchbase_password"
 COUCHBASE_DEFAULT_BUCKET="default"
+```
 
 Usage of this bundle
 --------------------
