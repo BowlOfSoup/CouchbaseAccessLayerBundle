@@ -1,5 +1,5 @@
-[![Minimum PHP Version](https://img.shields.io/badge/php-%5E%207.0-blue.svg?no-cache=1)](https://php.net/)
-[![Minimum Symfony Version](https://img.shields.io/badge/symfony-%5E%203.4-green.svg)](https://symfony.com/)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%5E%208.3-blue.svg?no-cache=1)](https://php.net/)
+[![Minimum Symfony Version](https://img.shields.io/badge/symfony-%5E%207.0-green.svg)](https://symfony.com/)
 
 - [Installation](#installation)
 - [When using parameters.yml](#when-using-parametersyml)
@@ -10,7 +10,7 @@ Checkout the README.md of that repository on how to use it.
 
 Installation
 ------------
-Require the bundle via composer in your Symfony ^3.4 project.
+Require the bundle via composer in your Symfony ^7.0 project.
 
     composer require bowlofsoup/couchbase-access-layer-bundle
 
@@ -22,30 +22,24 @@ Add the bundle to your `AppKernel.php`.
         ...
     ];
 
-Add the correct parameters in `app/config/config.yml`.
+Add the correct parameters in a new file: `config/packages/couchbase_access_layer.yml`.
 
     couchbase_access_layer:
-        host:
-        user:
-        password:
-        bucket_default:
+        host: '%env(COUCHBASE_HOST)%'
+        user: '%env(COUCHBASE_USER)%'
+        password: '%env(COUCHBASE_PASSWORD)%'
+        bucket_default: '%env(COUCHBASE_DEFAULT_BUCKET)%'
 
-When using parameters.yml
--------------------------
-If you're working with an additional `app/config/parameters.yml`, put in these parameters.
+Update your .env file
+---------------------
+Make sure to add the correct configuration values to your .env file:
 
-    couchbase_host:
-    couchbase_user:
-    couchbase_password:
-    couchbase_default_bucket:
-
-Then use/change the following parameters `app/config/config.yml`
-
-    couchbase_access_layer:
-        host: %couchbase_host%
-        user: %couchbase_user%
-        password: %couchbase_password%
-        bucket_default: %couchbase_default_bucket%
+```
+COUCHBASE_HOST="127.0.0.1"
+COUCHBASE_USER="couchbase_user"
+COUCHBASE_PASSWORD="couchbase_password"
+COUCHBASE_DEFAULT_BUCKET="default"
+```
 
 Usage of this bundle
 --------------------

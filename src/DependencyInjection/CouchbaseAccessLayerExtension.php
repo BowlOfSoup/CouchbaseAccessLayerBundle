@@ -12,9 +12,6 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 class CouchbaseAccessLayerExtension extends Extension
 {
     /**
-     * @param array $configs
-     * @param \Symfony\Component\DependencyInjection\ContainerBuilder $container
-     *
      * @throws \Exception
      */
     public function load(array $configs, ContainerBuilder $container)

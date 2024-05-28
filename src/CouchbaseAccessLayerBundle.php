@@ -6,9 +6,9 @@ namespace BowlOfSoup\CouchbaseAccessLayerBundle;
 
 use BowlOfSoup\CouchbaseAccessLayerBundle\DependencyInjection\CouchbaseAccessLayerExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-class CouchbaseAccessLayerBundle extends Bundle
+class CouchbaseAccessLayerBundle extends AbstractBundle
 {
     public function getContainerExtension(): ?ExtensionInterface
     {
